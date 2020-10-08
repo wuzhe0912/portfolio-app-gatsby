@@ -5,6 +5,7 @@ import {
   // FaFacebookSquare,
 } from "react-icons/fa"
 import { SiHexo } from "react-icons/si"
+import { AiOutlineFileMarkdown } from "react-icons/ai"
 
 const data = [
   {
@@ -15,10 +16,15 @@ const data = [
   {
     id: 2,
     icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.twitter.com",
+    url: "",
   },
   {
     id: 3,
+    icon: <AiOutlineFileMarkdown className="social-icon"></AiOutlineFileMarkdown>,
+    url: "",
+  },
+  {
+    id: 4,
     icon: <SiHexo className="social-icon"></SiHexo>,
     url: "https://pittwu-blog.netlify.app/",
   },

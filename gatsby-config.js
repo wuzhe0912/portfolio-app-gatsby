@@ -14,10 +14,6 @@ module.exports = {
     siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
   },
   plugins: [
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,13 +26,17 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        //   contentTypes : `jobs`, `projects`, `blogs`,
-        //   singleType : `about`
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [],
-        singleTypes: [],
+        contentTypes: [`jobs`],
+        // contentTypes: [`jobs`, `projects`, `blogs`, ],
+        // singleTypes: [`about`],
       },
     },
+    // `gatsby-transformer-json`,
+    // `gatsby-plugin-emotion`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {

@@ -13,19 +13,19 @@ const data = [
   },
   {
     id: 3,
-    text: "blog",
-    url: "/blog/",
-  },
-  {
-    id: 4,
     text: "about",
     url: "/about/",
   },
   {
-    id: 5,
-    text: "contact",
-    url: "/contact/",
+    id: 4,
+    text: "docsify",
+    url: "/blog/",
   },
+  // {
+  //   id: 5,
+  //   text: "contact",
+  //   url: "/contact/",
+  // },
 ]
 
 const tempLinks = data.map(link => {
