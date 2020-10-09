@@ -15,18 +15,20 @@ const Jobs = () => {
     <div className="jobs-center">
       {/* btn wrap */}
       <div className="btn-container">
-        {list.map((node, index) => {
-          return <button
-                    key={node.id}
-                    onClick={() => setValue(index)}
-                    className={`job-btn ${index === value && 'active-btn'}`}
-                  >
-            {node.company}
-          </button>
-        })}
+        {
+          list.map((node, index) => {
+            return <button
+                      key={node.id}
+                      onClick={() => setValue(index)}
+                      className={`job-btn ${index === value && 'active-btn'}`}
+                    >
+              {node.company}
+            </button>
+          })
+        }
       </div>
       {/* info */}
-      <article className="job-info">
+      <article className="job-info animation-fade-in">
         <h3>{position}</h3>
         <h4>{location}</h4>
         <p className="job-date">{date}</p>

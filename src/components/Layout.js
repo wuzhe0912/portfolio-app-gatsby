@@ -4,6 +4,8 @@ import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 // styles
 import "../css/main.css"
+import "../css/animation.css"
+import "../css/page.css"
 
 const Layout = ({ children }) => {
   const [ isOpen, setIsOpen ] = React.useState(false);
@@ -11,7 +13,7 @@ const Layout = ({ children }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
+    <div className="animation-fade-in">
       <Navbar toggleBtn={toggleBtn} />
       <Sidebar isOpen={isOpen} toggleBtn={toggleBtn} />
       { children }

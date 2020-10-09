@@ -11,15 +11,15 @@ const data = [
     text: "projects",
     url: "/projects/",
   },
+  // {
+  //   id: 3,
+  //   text: "docsify",
+  //   url: "/blog/",
+  // },
   {
     id: 3,
     text: "about",
     url: "/about/",
-  },
-  {
-    id: 4,
-    text: "docsify",
-    url: "/blog/",
   },
   // {
   //   id: 5,
