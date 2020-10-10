@@ -13,7 +13,7 @@ const About = () => {
   return <Layout>
     <section className="about-page">
       <div className="section-center about-center">
-        <img className="about-img" src={about} alt="about" />
+        <img className="about-img personal-img" src={about} alt="about" />
         <article className="about-text">
           <Title title="About Me" />
           <p>

@@ -61,3 +61,22 @@
   justify-content: center;
   padding: 3rem 0;
 }
+
+/* about */
+.personal-img {
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+}
+
+.personal-img:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
+}
+
+/* nav */
+@media screen and (max-width: 768px) {
+  .nav-logo {
+    width: 220px;
+  }
+}

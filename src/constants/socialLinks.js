@@ -16,12 +16,12 @@ const data = [
   {
     id: 2,
     icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "",
+    url: "https://www.linkedin.com/in/pitt-wu-17ab03b4/",
   },
   {
     id: 3,
     icon: <AiOutlineFileMarkdown className="social-icon"></AiOutlineFileMarkdown>,
-    url: "",
+    url: "https://docsify-pitt.netlify.app/",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const data = [
 const links = data.map(link => {
   return (
     <li key={link.id}>
-      <a href={link.url} className="social-link">
+      <a href={link.url} target="_blank" className="social-link">
         {link.icon}
       </a>
     </li>
