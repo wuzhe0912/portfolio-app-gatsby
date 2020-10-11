@@ -26,26 +26,19 @@ export default [
       },
     ],
   },
-  // {
-  //   id: 1,
-  //   tag: 'CSS',
-  //   list: [
-  //     {
-  //       title: "CSS title",
-  //       desc: `CSS desc`,
-  //       github: '',
-  //       link: '',
-  //       tags: ['CSS'],
-  //     },
-  //     {
-  //       title: "CSS title",
-  //       desc: `CSS desc`,
-  //       github: '',
-  //       link: '',
-  //       tags: ['CSS'],
-  //     },
-  //   ],
-  // },
+  {
+    id: 1,
+    tag: 'HTML&CSS',
+    list: [
+      {
+        title: "CSS Animation",
+        desc: `記錄一些簡單的動畫實作方式。`,
+        github: 'https://github.com/wuzhe0912/animation-effect-demo',
+        link: 'https://animate-demo.netlify.app/',
+        tags: ['HTML&CSS', 'Animation'],
+      },
+    ],
+  },
   // {
   //   id: 1,
   //   tag: 'JavaScript',
@@ -66,26 +59,19 @@ export default [
   //     },
   //   ],
   // },
-  // {
-  //   id: 2,
-  //   tag: 'Vue.js',
-  //   list: [
-  //     {
-  //       title: "Vue.js title",
-  //       desc: `Vue.js desc`,
-  //       github: '',
-  //       link: '',
-  //       tags: ['Vue.js'],
-  //     },
-  //     {
-  //       title: "Vue.js title",
-  //       desc: `Vue.js desc`,
-  //       github: '',
-  //       link: '',
-  //       tags: ['Vue.js'],
-  //     },
-  //   ],
-  // },
+  {
+    id: 2,
+    tag: 'Vue.js',
+    list: [
+      {
+        title: "Vue.js 聊天 App",
+        desc: `仿聊天app，前端採用Vue.js，後端介接Firebase(含註冊登入)，手刻UI(Flexbox)。`,
+        github: 'https://github.com/wuzhe0912/vue-firebase-chat',
+        link: 'https://vue-chat-6a66d.web.app/',
+        tags: ['Vue.js', 'Firebase'],
+      },
+    ],
+  },
   // {
   //   id: 3,
   //   tag: 'D3.js',
@@ -112,7 +98,7 @@ export default [
     list: [
       {
         title: "Nuxt.js Blog",
-        desc: `一個超簡易的練手用 Nuxt.js Blog`,
+        desc: `一個超簡易的練手用 Nuxt.js Blog。`,
         github: 'https://github.com/wuzhe0912/nuxt-blog',
         link: 'https://activello-nuxt-blog.netlify.app',
         tags: ['Nuxt.js'],

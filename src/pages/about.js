@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Title from "../components/Title"
-import about from "../assets/about.jpg"
+import about from "../assets/about.png"
 import { Link } from "gatsby"
 // import { graphql } from "gatsby"
 // import Image from "gatsby-image"
