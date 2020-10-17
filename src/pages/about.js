@@ -17,9 +17,12 @@ const About = () => {
         <article className="about-text">
           <Title title="About Me" />
           <p>
-            Hello，我是 Pitt，一位持續在前端領域闖蕩的開發者，在開發上喜歡使用 Pug > HTML，CSS 熟悉手刻，但正在嘗試
-            應用 Tailwind CSS，JS 走的路線是 Vue，因此這幾年仍會以 Vue 為主要開發工具，但也不定時在學習 React (但客觀的說，對 JSX 不太上手)。
-            另外，近期希望自己能在資料視覺化上有所耕耘，因此也在逐步摸索 D3.js。
+            Hello，我是 Pitt，一位持續在前端領域闖蕩的開發者，工作經歷上大多較側重在前台，但也持續在參與後台的開發。<br/>
+            <br/>
+            開發工具上，畢竟承接此前的工作經驗，JavaScript 仍以 Vue.js 為主，但近期開始督促自己摸索 React。<br />
+            CSS 方面較習慣手刻 Flexbox 來掌握版面，但也會逐步摸熟一門 UI Framework，讓開發更為快速便捷。<br />
+            HTML 則習慣使用模板語言 Pug。<br/>
+            此外，因為對資料視覺化也蠻感興趣的，雖然之前工作處理上大多使採用 chart.js 相關套件，但仍會嘗試學習 D3.js。
           </p>
           <div className="about-stack">
             {

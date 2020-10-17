@@ -6,9 +6,11 @@ import Hero from "../components/Hero"
 import Jobs from "../components/Jobs"
 // import Projects from "../components/Projects"
 // import Blogs from "../components/Blogs"
+import SEO from "../components/SEO"
 
 export default () => {
-  return  <Layout>
+  return <Layout>
+    <SEO title="Pitt Wu Profile" description="This is Pitt Wu Profile Site" />
     <Hero />
     {/* <Services /> */}
     <Jobs />

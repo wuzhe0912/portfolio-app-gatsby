@@ -6,14 +6,18 @@
 
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
-    twitterUsername: "@john_smilga",
-    image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    title: "Pitt Wu Profile",
+    description: "This is Pitt Wu Profile Site",
+    author: "@Pitt Wu",
+    twitterUsername: "",
+    image: "",
+    siteUrl: "https://gatsby-pitt-profile.netlify.app",
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,10 +36,6 @@ module.exports = {
     // },
     // `gatsby-transformer-json`,
     // `gatsby-plugin-emotion`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {

@@ -945,6 +945,11 @@ About Page
     grid-column: 6 / -1;
   }
 }
+@media screen and (max-width: 480px) {
+  .about-page {
+    padding: 2rem 0;
+  }
+}
 /*
 ===============
 Contact Page

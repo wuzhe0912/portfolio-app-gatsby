@@ -6,7 +6,8 @@ export default [
       {
         title: "Docsify",
         desc: `
-                目前準備採用的筆記管理工具，超輕量且運行快速，可以更專注在文件產出。
+                目前正在使用的筆記管理工具，輕量且運行快速，可以更專注在文件產出，同時樹狀結構更容易查閱。
+                除了完善新的筆記，同時逐步將舊的筆記遷移到 Docsify。
               `,
         github: 'https://github.com/wuzhe0912/docsify-note',
         link: 'https://docsify-pitt.netlify.app/',
@@ -23,19 +24,6 @@ export default [
         github: 'https://github.com/wuzhe0912/pittwu-blog',
         link: 'https://pittwu-blog.netlify.app/',
         tags: ['Hexo', '筆記'],
-      },
-    ],
-  },
-  {
-    id: 1,
-    tag: 'HTML&CSS',
-    list: [
-      {
-        title: "CSS Animation",
-        desc: `記錄一些簡單的動畫實作方式。`,
-        github: 'https://github.com/wuzhe0912/animation-effect-demo',
-        link: 'https://animate-demo.netlify.app/',
-        tags: ['HTML&CSS', 'Animation'],
       },
     ],
   },
@@ -102,6 +90,19 @@ export default [
         github: 'https://github.com/wuzhe0912/nuxt-blog',
         link: 'https://activello-nuxt-blog.netlify.app',
         tags: ['Nuxt.js'],
+      },
+    ],
+  },
+  {
+    id: 5,
+    tag: 'HTML&CSS',
+    list: [
+      {
+        title: "CSS Animation",
+        desc: `記錄一些簡單的動畫實作方式。`,
+        github: 'https://github.com/wuzhe0912/animation-effect-demo',
+        link: 'https://animate-demo.netlify.app/',
+        tags: ['HTML&CSS', 'Animation'],
       },
     ],
   },
