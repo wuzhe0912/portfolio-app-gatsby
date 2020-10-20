@@ -627,6 +627,18 @@ Jobs
   }
 }
 
+@media screen and (max-width: 992px) {
+  .job-btn {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .job-btn {
+    font-size: 0.8rem;
+  }
+}
+
 /*
 =============== 
 Projects

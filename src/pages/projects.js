@@ -51,10 +51,21 @@ const ProjectsPage = () => {
       <article className="project-wrap">
         {
           filterList.map((node, index) => {
-            const { title, desc, tags, github, link } = node;
+            const { title, layout, api, feature, tags, github, link } = node;
             return <div key={index} className="project-card">
-              <h4>{title}</h4>
-              <p>{desc}</p>
+              <h3>{title}</h3>
+              <p>
+                <strong>Layout：</strong>
+                {layout}
+              </p>
+              <p>
+                <strong>API：</strong>
+                {api}
+              </p>
+              <p>
+                <strong>Feature：</strong>
+                {feature}
+              </p>
               <div className="about-stack">
                 {
                   tags.map((node, index) => {
