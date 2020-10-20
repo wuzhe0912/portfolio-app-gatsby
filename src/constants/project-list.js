@@ -22,15 +22,6 @@ export default [
     tag: 'Vue.js',
     list: [
       {
-        title: 'Vue.js 聊天 App',
-        layout: '手刻 Flexbox',
-        api: '串接 Firebase 註冊登入',
-        feature: '仿聊天app，提供聊天室、會員列表、個人聊天等功能',
-        github: 'https://github.com/wuzhe0912/vue-firebase-chat',
-        link: 'https://vue-chat-6a66d.web.app/',
-        tags: ['Vue.js', 'Firebase'],
-      },
-      {
         title: 'Vue.js 模仿 Web App',
         layout: '手刻 Flexbox',
         api: 'News API、六角旅館預約服務 API',
@@ -38,6 +29,15 @@ export default [
         github: 'https://github.com/wuzhe0912/vue-tools-app',
         link: 'https://vue-tools-app.netlify.app/',
         tags: ['Vue.js', 'FlexBox'],
+      },
+      {
+        title: 'Vue.js 聊天 App',
+        layout: '手刻 Flexbox',
+        api: '串接 Firebase 註冊登入',
+        feature: '仿聊天app，提供聊天室、會員列表、個人聊天等功能',
+        github: 'https://github.com/wuzhe0912/vue-firebase-chat',
+        link: 'https://vue-firebase-chat.netlify.app/',
+        tags: ['Vue.js', 'Firebase'],
       },
       {
         title: 'Vue.js 仿 後台 CMS',
