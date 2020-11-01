@@ -22,13 +22,16 @@ export default [
     tag: 'Vue.js',
     list: [
       {
-        title: 'Vue.js 模仿 Web App',
-        layout: '手刻 Flexbox',
-        api: 'News API、六角旅館預約服務 API',
-        feature: '仿 Web App 建議手機開啟，串接 News API、六角提供的旅館預約服務 API，實作小功能i18n翻譯、待辦事項、蕃茄鐘、井字遊戲',
-        github: 'https://github.com/wuzhe0912/vue-tools-app',
-        link: 'https://vue-tools-app.netlify.app/',
-        tags: ['Vue.js', 'FlexBox'],
+        title: 'Vue.js 聊天 App - v2',
+        layout: 'Vuetify',
+        api: 'Firebase、第三方社群登入',
+        feature: `
+                  聊天室第二版，除了舊有的聊天室功能、會員列表。額外新增，創建公告頻道、串接第三方社群登入，
+                  目前待辦尚有，創建私人頻道、訊息提示通知、檔案上傳功能、email 註冊登入功能移植。
+                `,
+        github: 'https://github.com/wuzhe0912/vue-channel',
+        link: 'https://vue-chat-v2.netlify.app/',
+        tags: ['Vue.js', 'Firebase', 'Vuetify'],
       },
       {
         title: 'Vue.js 聊天 App',
@@ -38,6 +41,15 @@ export default [
         github: 'https://github.com/wuzhe0912/vue-firebase-chat',
         link: 'https://vue-firebase-chat.netlify.app/',
         tags: ['Vue.js', 'Firebase'],
+      },
+      {
+        title: 'Vue.js 模仿 Web App',
+        layout: '手刻 Flexbox',
+        api: 'News API、六角旅館預約服務 API',
+        feature: '仿 Web App 建議手機開啟，串接 News API、六角提供的旅館預約服務 API，實作小功能i18n翻譯、待辦事項、蕃茄鐘、井字遊戲',
+        github: 'https://github.com/wuzhe0912/vue-tools-app',
+        link: 'https://vue-tools-app.netlify.app/',
+        tags: ['Vue.js', 'FlexBox'],
       },
       {
         title: 'Vue.js 仿 後台 CMS',
