@@ -30,7 +30,7 @@ export default [
                   目前待辦尚有，創建私人頻道、訊息提示通知、檔案上傳功能、email 註冊登入功能移植。
                 `,
         github: 'https://github.com/wuzhe0912/vue-channel',
-        link: 'https://vue-chat-v2.netlify.app/',
+        link: 'https://vue-channel.web.app/',
         tags: ['Vue.js', 'Firebase', 'Vuetify'],
       },
       {
