@@ -22,12 +22,12 @@ export default [
     tag: 'Vue.js',
     list: [
       {
-        title: 'Vue.js 聊天 App - v2',
+        title: 'Vue.js 聊天 App(第二版)',
         layout: 'Vuetify',
         api: 'Firebase、第三方社群登入',
         feature: `
-                  聊天室第二版，除了舊有的聊天室功能、會員列表。額外新增，創建公告頻道、串接第三方社群登入，
-                  目前待辦尚有，創建私人頻道、訊息提示通知、檔案上傳功能、email 註冊登入功能移植。
+                  聊天室第二版，除了舊有的聊天室功能、會員列表。額外新增，創建公告頻道、串接第三方社群登入、私人聊天、顯示頻道名稱，
+                  目前待辦尚有，訊息提示通知、檔案上傳功能、email 註冊登入功能移植。
                 `,
         github: 'https://github.com/wuzhe0912/vue-channel',
         link: 'https://vue-channel.web.app/',
