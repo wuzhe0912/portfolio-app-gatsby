@@ -51,20 +51,28 @@ const ProjectsPage = () => {
       <article className="project-wrap">
         {
           filterList.map((node, index) => {
-            const { title, layout, api, feature, tags, github, link } = node;
+            const { title, Frontend, Backend, layout, done, todo, tags, github, link } = node;
             return <div key={index} className="project-card">
               <h3>{title}</h3>
+              <p>
+                <strong>Frontend：</strong>
+                {Frontend}
+              </p>
+              <p>
+                <strong>Backend：</strong>
+                {Backend}
+              </p>
               <p>
                 <strong>Layout：</strong>
                 {layout}
               </p>
               <p>
-                <strong>API：</strong>
-                {api}
+                <strong>Done：</strong>
+                {done}
               </p>
               <p>
-                <strong>Feature：</strong>
-                {feature}
+                <strong>Todo：</strong>
+                {todo}
               </p>
               <div className="about-stack">
                 {
@@ -74,10 +82,10 @@ const ProjectsPage = () => {
                 }
               </div>
               <div className="project-links links-wrap">
-                <a href={github} target="_blank">
+                <a href={github} target="_blank" rel="noreferrer noopener">
                   <FaGithubSquare className="project-icon" />
                 </a>
-                <a href={link} target="_blank">
+                <a href={link} target="_blank" rel="noreferrer noopener">
                   <FaShareSquare className="project-icon" />
                 </a>
               </div>

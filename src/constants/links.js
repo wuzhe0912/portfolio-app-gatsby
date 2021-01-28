@@ -11,21 +11,11 @@ const data = [
     text: "projects",
     url: "/projects/",
   },
-  // {
-  //   id: 3,
-  //   text: "docsify",
-  //   url: "/blog/",
-  // },
   {
     id: 3,
     text: "about",
     url: "/about/",
   },
-  // {
-  //   id: 5,
-  //   text: "contact",
-  //   url: "/contact/",
-  // },
 ]
 
 const tempLinks = data.map(link => {
