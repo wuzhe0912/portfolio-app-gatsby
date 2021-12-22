@@ -1,27 +1,8 @@
 import React from "react"
 import Title from "./Title"
 import services from "../constants/services"
-
 const Services = () => {
-  return <section className="section bg-grey">
-    <Title title="services" />
-    <div className="section-center services-center">
-      {
-        services.map((node) => {
-          // 解構
-          const { id, icon, title, text } = node;
-          return (
-            <article key={id} className="service">
-              { icon }
-              <h4>{ title }</h4>
-              <div className="underline"></div>
-              <p>{ text }</p>
-            </article>
-          )
-        })
-      }
-    </div>
-  </section>
+  return <h2>services component</h2>
 }
 
 export default Services
