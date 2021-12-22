@@ -7,6 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
+    "init": "rm -rf node_modules && rm -rf yarn.lock && yarn && yarn dev",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
