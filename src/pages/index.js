@@ -9,7 +9,8 @@ const IndexPage = () => {
   return (
     <>
       <main>
-        <Hero></Hero>
+        <Hero />
+        <Services />
       </main>
     </>
   );
