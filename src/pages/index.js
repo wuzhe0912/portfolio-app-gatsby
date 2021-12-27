@@ -41,8 +41,8 @@ const IndexPage = ({ data }) => {
     <>
       <main>
         <Hero />
-        <Services />
         <Jobs />
+        {/* <Services /> */}
         <Projects
           title="Recent Projects"
           showLink

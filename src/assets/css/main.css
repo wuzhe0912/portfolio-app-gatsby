@@ -728,17 +728,30 @@ Projects
 .project-icon:hover {
   color: var(--clr-primary-1);
 }
-@media screen and (min-width: 576px) {
-  .project-img {
-    height: 19rem;
-  }
+/* projects & demo cards */
+.cards-wrapper {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-gap: 3rem 1.5rem;
+  gap: 3rem 1.5rem;
+  grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
 }
-@media screen and (min-width: 768px) {
-  .project-img {
-    height: 22rem;
-  }
+
+.single-card {
+  transition: var(--transition);
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
 }
+
 @media screen and (min-width: 992px) {
+  .cards-wrapper {
+    width: 95vw;
+  }
   .project {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
@@ -767,6 +780,21 @@ Projects
     grid-column: 2 / span 7;
     grid-row: 1 / 1;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-img {
+    height: 22rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(auto-fill,minmax(358px,1fr));
+  }
+  .project-img {
+    height: 19rem;
   }
 }
 

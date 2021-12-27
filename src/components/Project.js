@@ -1,10 +1,12 @@
-import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
-import { Link } from "gatsby"
+import React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { FaGithubSquare, FaShareSquare } from "react-icons/fa";
+import { Link } from "gatsby";
 
-const Project = () => {
-  return <h2>single project component</h2>
-}
+const Project = ({ attributes }) => {
+  const { description, image_url, github } = attributes;
 
-export default Project
+  return <article className="single-card">single project component</article>;
+};
+
+export default Project;
