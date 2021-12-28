@@ -1,12 +1,37 @@
 import React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa";
-import { Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Project = ({ attributes }) => {
-  const { description, image_url, github } = attributes;
+  console.log(1, attributes);
+  const { description, image_url, github, site, tags, title } = attributes;
 
-  return <article className="single-card">single project component</article>;
+  return (
+    <article className="single-card">
+      <div className="card-img-wrapper">
+        <img src={image_url} alt={description} className="card-img-fit" />
+      </div>
+      <div className="card-text-wrapper">
+        <a href={site} className="site-icon" target="_blank">
+          <FaShareSquare />
+        </a>
+        <div className="text-info">
+          <h4>{title}</h4>
+          <div className="text-tags">
+            {tags.map(tags => {
+              return <p key={`${tags.id}${tags.tag}`}>{tags.tag}</p>;
+            })}
+          </div>
+        </div>
+        <div className="text-footer">
+          <a href={github} className="github-icon" target="_blank">
+            Source Code
+            <FaGithubSquare />
+          </a>
+        </div>
+      </div>
+    </article>
+  );
 };
 
 export default Project;

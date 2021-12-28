@@ -1,0 +1,124 @@
+.cards-wrapper {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-gap: 3rem 1.5rem;
+  gap: 3rem 1.5rem;
+  grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
+}
+
+.single-card {
+  transition: var(--transition);
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+
+  &:hover {
+    box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
+    transform: scale(1.02);
+  }
+}
+
+.card-img-wrapper {
+  height: 13rem;
+}
+
+.card-img-fit {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+.card-text-wrapper {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.site-icon {
+  font-size: 2.5rem;
+  padding: 0 0.63rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 0.5rem solid var(--clr-white);
+  transition: var(--transition);
+  transform: translateY(-50%);
+  background: var(--clr-primary-9);
+  color: var(--clr-primary-5);
+}
+
+.text-info {
+  margin-top: -1.25rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  h4 {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+  }
+
+  .text-tags {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+
+    p {
+      background: var(--clr-grey-9);
+      padding: 0.15rem 0.35rem;
+      border-radius: var(--radius);
+      text-transform: uppercase;
+      font-size: .75rem;
+      letter-spacing: 2px;
+      display: block;
+      margin: 0.25rem 0.25rem 0;
+      color: var(--clr-grey-5);
+    }
+  }
+}
+
+.text-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-primary-10);
+  padding: 0.75rem 1rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.github-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-primary-5);
+
+  svg {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards-wrapper {
+    width: 95vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 576px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(auto-fill,minmax(358px,1fr));
+  }
+
+  .card-img-wrapper {
+    height: 15rem;
+  }
+}
