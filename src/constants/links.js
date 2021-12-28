@@ -14,11 +14,6 @@ const data = [
     text: "projects",
     url: "/projects/",
   },
-  {
-    id: 5,
-    text: "contact",
-    url: "/contact/",
-  },
-]
+];
 
-export default data
+export default data;

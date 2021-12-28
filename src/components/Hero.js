@@ -14,16 +14,14 @@ const Hero = () => {
             {/* <h1>I'm Pitt</h1> */}
             <h1>WebDev</h1>
             <h4>Fronted Developer</h4>
-            <Link to="/contact" className="btn">
-              Contact Me
-            </Link>
             <div className="social-links">
-              {socialLinks.map(socialLink => {
+              {socialLinks.map((socialLink, index) => {
                 return (
                   <a
                     href={socialLink.url}
-                    key={socialLink.id}
+                    key={`${index}-${socialLink.text}`}
                     className="social-link"
+                    target="_blank"
                   >
                     {socialLink.icon}
                   </a>

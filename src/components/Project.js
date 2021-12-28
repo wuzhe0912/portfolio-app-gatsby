@@ -3,7 +3,6 @@ import { FaGithubSquare, FaShareSquare } from "react-icons/fa";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Project = ({ attributes }) => {
-  console.log(1, attributes);
   const { description, image_url, github, site, tags, title } = attributes;
 
   return (

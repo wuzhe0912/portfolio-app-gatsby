@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Hero from "../components/Hero";
-import Services from "../components/Services";
+// import Services from "../components/Services";
 import Jobs from "../components/Jobs";
 import Projects from "../components/Projects";
 import Seo from "../components/Seo";
@@ -24,6 +24,7 @@ export const query = graphql`
             }
             title
             slug
+            demo
           }
         }
       }
@@ -32,10 +33,15 @@ export const query = graphql`
   }
 `;
 
-const IndexPage = ({ data }) => {
-  const { allStrapiProject } = data;
-  const { nodes } = allStrapiProject;
-  const projectsData = nodes[0].data;
+const IndexPage = ({
+  data: {
+    allStrapiProject: { nodes },
+  },
+}) => {
+  const formData = nodes[0].data;
+  const recentProjectData = formData.filter(item => {
+    return item.attributes.recent;
+  });
 
   return (
     <>
@@ -45,8 +51,8 @@ const IndexPage = ({ data }) => {
         {/* <Services /> */}
         <Projects
           title="Recent Projects"
-          showLink
-          projectsData={projectsData}
+          isRecent
+          projectsData={recentProjectData}
         />
       </main>
     </>

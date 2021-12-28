@@ -1,38 +1,40 @@
-import React from "react"
+import React from "react";
 import {
-  FaFacebookSquare,
+  FaGithubSquare,
   FaLinkedin,
-  FaDribbbleSquare,
-  FaBehanceSquare,
-  FaTwitterSquare,
-} from "react-icons/fa"
+  FaPencilAlt,
+  FaFacebookSquare,
+} from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
+    url: `https://github.com/wuzhe0912`,
   },
   {
     id: 2,
     icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.twitter.com",
+    url: "https://www.linkedin.com/in/pitt-wu",
   },
   {
     id: 3,
-    icon: <FaDribbbleSquare className="social-icon"></FaDribbbleSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaPencilAlt className="social-icon"></FaPencilAlt>,
+    url: "https://docusaurus-pitt-blog.vercel.app/",
   },
   {
     id: 4,
-    icon: <FaBehanceSquare className="social-icon"></FaBehanceSquare>,
-    url: "https://www.twitter.com",
+    icon: (
+      <BsFillPersonLinesFill className="social-icon"></BsFillPersonLinesFill>
+    ),
+    url: "",
   },
   {
     id: 5,
-    icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
+    url: "https://www.facebook.com/wuzhe0912",
   },
-]
+];
 
-export default data
+export default data;

@@ -9,7 +9,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="Pitt Wu" />
+          <Link to="/">
+            <img src={logo} alt="Pitt Wu's website logo" />
+          </Link>
           <button type="button" className="toggle-btn">
             <FaAlignRight></FaAlignRight>
           </button>
