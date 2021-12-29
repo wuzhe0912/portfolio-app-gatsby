@@ -6,9 +6,16 @@ import Footer from "./Footer";
 import "../assets/styles/main.scss";
 
 const Layout = ({ children }) => {
+  const circleList = [1, 2, 3, 4];
+
   return (
     <>
       <Navbar></Navbar>
+      <div className="bg-circles">
+        {circleList.map(number => {
+          return <div className={`circle-${number}`} key={number}></div>;
+        })}
+      </div>
       {children}
       <Footer></Footer>
     </>

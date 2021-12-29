@@ -6,7 +6,7 @@ const Project = ({ attributes }) => {
   const { description, image_url, github, site, tags, title } = attributes;
 
   return (
-    <article className="single-card">
+    <article className="single-card fade-in">
       <div className="card-img-wrapper">
         <img src={image_url} alt={description} className="card-img-fit" />
       </div>

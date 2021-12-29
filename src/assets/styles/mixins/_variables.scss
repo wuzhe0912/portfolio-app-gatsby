@@ -33,4 +33,16 @@
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 700px;
+  // mixing styles
+  --main-color: #e02f6b;
+  --blue: #0000ff;
+  --blue-dark: #18293c;
+  --orange: #ffa500;
+  --green-yellow: #cddc39;
+  --pink-light: #efa2b4;
+  --cyan-light: #aef1ee;
+  --white: #ffffff;
+  --white-alpha-40: rgba(255, 255, 255, 0.40);
+  --white-alpha-25: rgba(255, 255, 255, 0.25);
+  --backdrop-filter-blur: blur(5px);
 }

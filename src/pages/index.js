@@ -45,7 +45,7 @@ const IndexPage = ({
 
   return (
     <>
-      <main>
+      <main className="fade-in">
         <Hero />
         <Jobs />
         {/* <Services /> */}

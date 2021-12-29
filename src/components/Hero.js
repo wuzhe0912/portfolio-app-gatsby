@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <header className="hero">
       <section className="section-center hero-center">
-        <article className="hero-info">
+        <article>
           <div>
             <div className="underline"></div>
             {/* <h1>I'm Pitt</h1> */}

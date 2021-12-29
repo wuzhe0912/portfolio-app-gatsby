@@ -40,20 +40,23 @@ const ProjectsPage = ({
 
   const [projects, setProjects] = useState(true);
 
-  if (!projects) {
-    fliterData = fliterData.filter(node => {
-      return item.attributes.demo;
-    });
-  } else {
-  }
+  fliterData = fliterData.filter(item => {
+    if (projects) {
+      return !item.attributes.demo;
+    } else return item.attributes.demo;
+  });
 
   return (
     <>
       <main>
         <section className="projects-page">
           <div className="projects-tab">
-            <span onClick={() => setProjects(true)}>Projects</span>
-            <span onClick={() => setProjects(false)}>Demos</span>
+            <span className="view-btn" onClick={() => setProjects(true)}>
+              View Projects
+            </span>
+            <span className="view-btn" onClick={() => setProjects(false)}>
+              View Demos
+            </span>
           </div>
           <Projects
             title={projects ? "All Projects" : "All Demos"}

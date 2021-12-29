@@ -1,13 +1,12 @@
 .footer {
   height: 9rem;
-  background: #222;
   text-align: center;
   display: grid;
   place-items: center;
 }
 .footer h4 {
   margin-top: 0.5rem;
-  color: var(--clr-white);
+  color: var(--blue-dark);
   font-weight: normal;
 }
 .footer h4 span {
@@ -17,7 +16,7 @@
   margin: 0 auto 1rem auto;
 }
 .footer .social-link {
-  color: var(--clr-white);
+  color: var(--blue-dark);
 }
 .footer .social-link:hover {
   color: var(--clr-primary-5);

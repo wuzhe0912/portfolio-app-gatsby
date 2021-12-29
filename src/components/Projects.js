@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 const Projects = ({ projectsData, title, isRecent }) => {
   return (
-    <section className="section projects">
+    <section className="section projects fade-in">
       <Title title={title} />
       <div className="cards-wrapper">
         {projectsData.map((project, index) => {
