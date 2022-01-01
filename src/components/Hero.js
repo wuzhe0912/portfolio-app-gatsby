@@ -11,9 +11,8 @@ const Hero = () => {
         <article>
           <div>
             <div className="underline"></div>
-            {/* <h1>I'm Pitt</h1> */}
-            <h1>WebDev</h1>
-            <h4>Fronted Developer</h4>
+            <h1>Hello, I'm Pitt</h1>
+            <h4>Fronted Engineer</h4>
             <div className="social-links">
               {socialLinks.map((socialLink, index) => {
                 return (

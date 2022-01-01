@@ -35,7 +35,6 @@ module.exports = {
             endpoint: `projects/?populate=*`,
           },
         ],
-        // singleTypes: [`home-page`, `contact`],
       },
     },
   ],

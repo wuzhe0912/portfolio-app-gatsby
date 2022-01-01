@@ -1,7 +1,7 @@
 .bg-circles {
   position: fixed;
   top: 0;
-  height: 100%;
+  height: calc(100% - 9rem);
   max-width: 1200px;
   width: calc(100% - 30px);
   left: 50%;
@@ -17,7 +17,7 @@
     width: 60px;
     background-color: var(--blue);
     left: 5%;
-    top: 15%;
+    top: 20%;
     opacity: 0.3;
     animation: zoomInOut 8s linear infinite;
   }
@@ -36,7 +36,7 @@
     height: 70px;
     width: 70px;
     background-color: var(--white);
-    top: 20%;
+    top: 25%;
     right: -40px;
     opacity: 0.6;
   }

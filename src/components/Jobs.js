@@ -12,8 +12,11 @@ export const query = graphql`
           id
           attributes {
             company
+            title
             date
             location
+            recent
+            related
             desc {
               id
               text
@@ -29,8 +32,15 @@ const Jobs = () => {
   const { allStrapiJob } = useStaticQuery(query);
   const { nodes } = allStrapiJob;
   const { data } = nodes[0];
+  const recentJobsData = data.filter(item => {
+    if (item.attributes.recent & item.attributes.related) {
+      return item;
+    }
+  });
+  recentJobsData.reverse();
+
   const [value, setValue] = useState(0);
-  const { company, location, date, desc } = data[value].attributes;
+  const { title, location, date, desc } = recentJobsData[value].attributes;
 
   return (
     <section className="section jobs">
@@ -38,7 +48,7 @@ const Jobs = () => {
       <div className="jobs-center">
         {/* company name list */}
         <div className="btn-container">
-          {data.map((data, index) => {
+          {recentJobsData.map((data, index) => {
             return (
               <button
                 key={data.id}
@@ -52,12 +62,12 @@ const Jobs = () => {
         </div>
         {/* jobs info */}
         <article className="job-info">
-          <h3>{company}</h3>
+          <h3>{title}</h3>
           <h4>{location}</h4>
           <p className="job-date">{date}</p>
           {desc.map(desc => {
             return (
-              <div key={desc.id} className="job-desc">
+              <div key={desc.id} className="job-desc fade-in">
                 <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
                 <p>{desc.text}</p>
               </div>
