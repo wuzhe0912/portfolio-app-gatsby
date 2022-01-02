@@ -1,11 +1,12 @@
 .bg-circles {
   position: fixed;
   top: 0;
-  height: calc(100% - 9rem);
+  height: 100%;
   max-width: 1200px;
   width: calc(100% - 30px);
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: none;
 
   div {
     position: absolute;

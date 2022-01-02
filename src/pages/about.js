@@ -1,14 +1,20 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Title from "../components/Title"
-import Seo from "../components/Seo"
+import React from "react";
+import { graphql } from "gatsby";
+import Title from "../components/Title";
+import Seo from "../components/Seo";
 
 const About = () => {
-  return (
-    <>
-      <h2>about page</h2>
-    </>
-  )
-}
+  const titleText = "About Me";
 
-export default About
+  return (
+    <section className="section about-page fade-in">
+      <Title title={titleText} />
+      <div className="row">
+        <div className="about-content"></div>
+        <div className="about-img"></div>
+      </div>
+    </section>
+  );
+};
+
+export default About;

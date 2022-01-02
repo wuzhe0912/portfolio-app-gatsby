@@ -38,28 +38,39 @@ const ProjectsPage = ({
   const formData = nodes[0].data;
   let fliterData = formData;
 
-  const [projects, setProjects] = useState(true);
+  const [status, setStatus] = useState("projects");
+  const btnList = [
+    { uid: "projects", name: "View Projects" },
+    { uid: "demos", name: "View Demos" },
+  ];
 
   fliterData = fliterData.filter(item => {
-    if (projects) {
-      return !item.attributes.demo;
-    } else return item.attributes.demo;
+    if (status === "demos") {
+      return item.attributes.demo;
+    } else return !item.attributes.demo;
   });
 
   return (
     <>
       <main>
-        <section className="projects-page">
+        <section className="projects-page fade-in">
           <div className="projects-tab">
-            <span className="view-btn" onClick={() => setProjects(true)}>
-              View Projects
-            </span>
-            <span className="view-btn" onClick={() => setProjects(false)}>
-              View Demos
-            </span>
+            {btnList.map((item, index) => {
+              return (
+                <span
+                  className={`view-btn ${
+                    item.uid === status ? "view-btn-active" : ""
+                  }`}
+                  key={index}
+                  onClick={() => setStatus(item.uid)}
+                >
+                  {item.name}
+                </span>
+              );
+            })}
           </div>
           <Projects
-            title={projects ? "All Projects" : "All Demos"}
+            title={status === "projects" ? "All Projects" : "All Demos"}
             projectsData={fliterData}
           />
         </section>
