@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-import Projects from "../components/Projects";
-import Seo from "../components/Seo";
+import React, { useState } from 'react';
+import { graphql } from 'gatsby';
+import Projects from '../components/Projects';
+import Seo from '../components/Seo';
 
 export const query = graphql`
   {
@@ -38,28 +38,40 @@ const ProjectsPage = ({
   const formData = nodes[0].data;
   let fliterData = formData;
 
-  const [status, setStatus] = useState("projects");
+  const [status, setStatus] = useState('projects');
+
+  // check for selecte projects or demos
   const btnList = [
-    { uid: "projects", name: "View Projects" },
-    { uid: "demos", name: "View Demos" },
+    { uid: 'projects', name: 'View Projects' },
+    { uid: 'demos', name: 'View Demos' },
   ];
 
   fliterData = fliterData.filter(item => {
-    if (status === "demos") {
+    if (status === 'demos') {
       return item.attributes.demo;
     } else return !item.attributes.demo;
   });
+
+  // check selecte tag
+  let tagList = [];
+  tagList.push('all');
+  fliterData.forEach(item => {
+    item.attributes.tags.forEach(subItem => {
+      tagList.push(subItem.tag);
+    });
+  });
+  const uniqueTagList = [...new Set(tagList)];
 
   return (
     <>
       <main>
         <section className="projects-page fade-in">
-          <div className="projects-tab">
+          <div className="projects-block projects-tab">
             {btnList.map((item, index) => {
               return (
                 <span
                   className={`view-btn ${
-                    item.uid === status ? "view-btn-active" : ""
+                    item.uid === status ? 'view-btn-active' : ''
                   }`}
                   key={index}
                   onClick={() => setStatus(item.uid)}
@@ -70,8 +82,9 @@ const ProjectsPage = ({
             })}
           </div>
           <Projects
-            title={status === "projects" ? "All Projects" : "All Demos"}
+            title={status === 'projects' ? 'All Projects' : 'All Demos'}
             projectsData={fliterData}
+            uniqueTagList={uniqueTagList}
           />
         </section>
       </main>
