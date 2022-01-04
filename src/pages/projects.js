@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import Projects from '../components/Projects';
+import Tags from '../components/Tags';
 import Seo from '../components/Seo';
 
 export const query = graphql`
@@ -36,31 +37,52 @@ const ProjectsPage = ({
   },
 }) => {
   const formData = nodes[0].data;
-  let fliterData = formData;
+  let filterData = formData;
 
-  const [status, setStatus] = useState('projects');
+  const [projects, setProjects] = useState('projects');
+  const [tag, setTag] = useState('all');
+  const [filterTagData, setFilterTagData] = useState([]);
 
-  // check for selecte projects or demos
+  // 1.1 build project & demo list
   const btnList = [
     { uid: 'projects', name: 'View Projects' },
     { uid: 'demos', name: 'View Demos' },
   ];
 
-  fliterData = fliterData.filter(item => {
-    if (status === 'demos') {
+  // 1.2 use project or demo to filter list
+  filterData = filterData.filter(item => {
+    if (projects === 'demos') {
       return item.attributes.demo;
     } else return !item.attributes.demo;
   });
+  filterData.reverse();
 
-  // check selecte tag
+  // 2.1 build tags list
   let tagList = [];
   tagList.push('all');
-  fliterData.forEach(item => {
+  filterData.forEach(item => {
     item.attributes.tags.forEach(subItem => {
       tagList.push(subItem.tag);
     });
   });
   const uniqueTagList = [...new Set(tagList)];
+
+  // 2.2 listen tag change and use selected tag to filter list
+  useEffect(() => {
+    if (tag !== 'all') {
+      let filterTag = [];
+      filterData.forEach(item => {
+        item.attributes.tags.forEach(subItem => {
+          if (subItem.tag === tag) {
+            filterTag.push(item);
+          }
+        });
+      });
+      setFilterTagData(filterTag);
+    } else {
+      setFilterTagData([]);
+    }
+  }, [tag, projects]);
 
   return (
     <>
@@ -71,19 +93,24 @@ const ProjectsPage = ({
               return (
                 <span
                   className={`view-btn ${
-                    item.uid === status ? 'view-btn-active' : ''
+                    item.uid === projects ? 'view-btn-active' : ''
                   }`}
                   key={index}
-                  onClick={() => setStatus(item.uid)}
+                  onClick={() => setProjects(item.uid)}
                 >
                   {item.name}
                 </span>
               );
             })}
           </div>
+          <Tags
+            projects={projects}
+            filterTag={tag => setTag(tag)}
+            uniqueTagList={uniqueTagList}
+          />
           <Projects
-            title={status === 'projects' ? 'All Projects' : 'All Demos'}
-            projectsData={fliterData}
+            title={projects === 'projects' ? 'All Projects' : 'All Demos'}
+            projectsData={filterTagData.length > 0 ? filterTagData : filterData}
             uniqueTagList={uniqueTagList}
           />
         </section>
